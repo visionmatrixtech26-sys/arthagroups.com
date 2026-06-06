@@ -139,6 +139,7 @@
         0 0 15px rgba(240,180,41,1),
         0 0 35px rgba(240,180,41,0.7),
         0 0 70px rgba(240,180,41,0.4);
+      overflow:hidden;
       animation: float 5s ease-in-out infinite;
       user-select:none;
       position:relative;
@@ -362,7 +363,7 @@
     .copy {
       font-size:9.5px;
       letter-spacing:0.22em;
-      color:rgba(240,180,41,0.35);
+      color:rgba(255,253,247,0.75);
       font-weight:300;
       text-transform:uppercase;
       animation: fadeUp 1s 1.05s both;
@@ -429,9 +430,14 @@
 
 <div class="wrapper">
 
-  <!-- Lettermark -->
+  <!-- Logo -->
   <div class="mark-outer">
-    <div class="mark">A</div>
+    <div class="mark">
+      <img src="https://raw.githubusercontent.com/badgerh001-ai/arthagroups.com/main/assets/artha.png"
+           alt="Artha Interior Designers"
+           onerror="this.style.display='none'; this.parentElement.innerHTML='A';"
+           style="width:110px; height:110px; object-fit:contain; border-radius:50%; display:block;"/>
+    </div>
   </div>
 
   <p class="pre-label">Est. 2026 &nbsp;·&nbsp; Bangalore</p>
@@ -493,7 +499,7 @@
     </a>
   </div>
 
-  <p class="copy">© 2026 Artha Interior Designers. All Rights Reserved.</p>
+  <p class="copy">© 2024 Artha Interior Designers. All Rights Reserved.</p>
 
 </div>
 
