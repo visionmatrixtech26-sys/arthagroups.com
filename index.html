@@ -9,14 +9,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --navy: #0B1929;
-    --navy-mid: #112240;
-    --gold: #C9A84C;
-    --gold-light: #E8CC7A;
-    --gold-pale: #F0DFA0;
-    --white: #F5F0E8;
-    --white-dim: rgba(245,240,232,0.7);
-    --white-faint: rgba(245,240,232,0.12);
+    --navy: #0A1628;
+    --navy-mid: #0F1E35;
+    --gold: #D4A017;
+    --gold-light: #F0C040;
+    --gold-pale: #F7DC6F;
+    --white: #FAF6EE;
+    --white-dim: rgba(250,246,238,0.78);
+    --white-faint: rgba(250,246,238,0.14);
   }
 
   html { scroll-behavior: smooth; }
@@ -26,6 +26,9 @@
     color: var(--white);
     font-family: 'Cormorant Garamond', serif;
     overflow-x: hidden;
+    background-image: 
+      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(212,160,23,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 30% at 100% 100%, rgba(212,160,23,0.04) 0%, transparent 50%);
   }
 
   /* ── SCROLLBAR ── */
@@ -38,9 +41,10 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 999;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 60px;
-    background: rgba(11,25,41,0.85);
+    background: rgba(10,22,40,0.88);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(212,160,23,0.25);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.4), 0 1px 0 rgba(212,160,23,0.1);
     transition: padding 0.3s ease;
   }
   .nav-logo img {
@@ -88,17 +92,26 @@
     position: absolute; inset: 0;
     background-image: url('https://raw.githubusercontent.com/badgerh001-ai/arthagroups.com/main/arthabanner.png');
     background-size: cover; background-position: center;
-    opacity: 0.6;
+    opacity: 0.75;
+  }
+  .hero-glow {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, 
+      rgba(212,160,23,0.12) 0%, 
+      rgba(212,160,23,0.04) 45%, 
+      transparent 70%);
+    z-index: 1;
   }
   .hero-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(180deg, 
-      rgba(11,25,41,0.3) 0%, 
-      rgba(11,25,41,0.15) 40%, 
-      rgba(11,25,41,0.7) 100%);
+      rgba(10,22,40,0.2) 0%, 
+      rgba(10,22,40,0.08) 35%, 
+      rgba(10,22,40,0.65) 100%);
+    z-index: 2;
   }
   .hero-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: 3;
     max-width: 860px; padding: 0 24px;
     animation: heroFadeUp 1.2s ease both;
   }
@@ -146,7 +159,8 @@
   .hero-tagline {
     font-family: 'Montserrat', sans-serif;
     font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 12px;
+    color: var(--gold-light); margin-bottom: 12px;
+    text-shadow: 0 0 16px rgba(240,192,64,0.5);
   }
   .hero-headline {
     font-family: 'Cinzel', serif;
@@ -173,23 +187,36 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
     padding: 16px 40px;
-    background: var(--gold);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
     color: var(--navy); border: none; cursor: pointer;
-    text-decoration: none; transition: background 0.3s, transform 0.2s;
+    text-decoration: none; 
+    transition: transform 0.2s, box-shadow 0.3s;
     display: inline-block;
+    box-shadow: 0 4px 20px rgba(212,160,23,0.35);
+    font-weight: 600;
   }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-primary:hover { 
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-pale) 100%);
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 30px rgba(212,160,23,0.55);
+  }
   .btn-outline {
     font-family: 'Montserrat', sans-serif;
     font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
     padding: 16px 40px;
     background: transparent;
-    color: var(--white); border: 1px solid rgba(245,240,232,0.4);
+    color: var(--white); 
+    border: 1px solid rgba(212,160,23,0.6);
     cursor: pointer; text-decoration: none;
-    transition: border-color 0.3s, color 0.3s;
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
     display: inline-block;
+    box-shadow: 0 0 0 0 rgba(212,160,23,0);
   }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-outline:hover { 
+    border-color: var(--gold); 
+    color: var(--gold); 
+    box-shadow: 0 0 16px rgba(212,160,23,0.25), inset 0 0 16px rgba(212,160,23,0.05);
+  }
   .hero-scroll {
     position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; gap: 8px;
@@ -202,8 +229,10 @@
   }
   .scroll-line {
     width: 1px; height: 48px;
-    background: linear-gradient(180deg, var(--gold), transparent);
+    background: linear-gradient(180deg, var(--gold-light), transparent);
+    box-shadow: 0 0 6px rgba(240,192,64,0.6);
     animation: scrollPulse 1.8s ease infinite;
+  }nfinite;
   }
 
   /* ── STATS STRIP ── */
@@ -219,8 +248,9 @@
   .stat-item { text-align: center; }
   .stat-num {
     font-family: 'Cinzel', serif;
-    font-size: 36px; font-weight: 700;
+    font-size: 40px; font-weight: 700;
     color: var(--gold); display: block;
+    text-shadow: 0 0 20px rgba(212,160,23,0.4);
   }
   .stat-label {
     font-family: 'Montserrat', sans-serif;
@@ -233,8 +263,9 @@
   .section-eyebrow {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 14px;
+    color: var(--gold-light); margin-bottom: 14px;
     display: block;
+    text-shadow: 0 0 14px rgba(240,192,64,0.45);
   }
   .section-title {
     font-family: 'Cinzel', serif;
@@ -248,8 +279,10 @@
     max-width: 560px;
   }
   .gold-rule {
-    width: 60px; height: 1px;
-    background: var(--gold); margin-bottom: 28px;
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    margin-bottom: 28px;
+    box-shadow: 0 0 10px rgba(212,160,23,0.5);
   }
 
   /* ── ABOUT ── */
@@ -859,6 +892,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-logo-wrap">
