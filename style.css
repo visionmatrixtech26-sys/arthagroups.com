@@ -888,10 +888,22 @@
 
   /* Values strip base */
   .values-strip {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     border: 1px solid rgba(212,160,23,0.15);
+    width: 100%;
+  }
+  .value-item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 28px 20px;
+    background: var(--navy-mid);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--white-dim); text-align: center;
   }
 
   /* Plan card base */  
@@ -962,6 +974,194 @@
   .footer-contact-list { list-style: none; padding: 0; margin: 0; }
   .footer-contact-list li { list-style: none; margin-bottom: 10px; }
 
+
+  /* Featured plan fix */
+  .featured-plan {
+    border-color: rgba(212,160,23,0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 56px rgba(0,0,0,0.4), 0 0 40px rgba(212,160,23,0.2);
+    z-index: 1;
+  }
+  .featured-plan .plan-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: block !important;
+  }
+  .featured-plan .plan-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    display: block !important;
+    background: linear-gradient(180deg,
+      rgba(10,22,40,0.1) 0%,
+      rgba(10,22,40,0.35) 35%,
+      rgba(10,22,40,0.82) 65%,
+      rgba(10,22,40,0.97) 100%) !important;
+  }
+  .featured-plan .plan-content {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  .featured-plan .plan-badge {
+    position: absolute !important;
+    top: 20px; right: 20px;
+    z-index: 3 !important;
+  }
+
+
+  /* ── HAMBURGER & MOBILE MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: rgba(10,22,40,0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212,160,23,0.25);
+    flex-direction: column;
+    padding: 20px 28px 28px;
+    z-index: 998;
+    display: none;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--white-dim);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(212,160,23,0.08);
+    transition: color 0.3s, padding-left 0.3s;
+    display: block;
+  }
+  .mobile-menu a:hover { color: var(--gold); padding-left: 8px; }
+  .mobile-menu .mobile-cta {
+    margin-top: 20px;
+    border: 1px solid var(--gold) !important;
+    color: var(--gold) !important;
+    text-align: center;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid var(--gold) !important;
+  }
+
+
+  /* Footer links column */
+  .footer-links-col { }
+  .footer-col-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+    display: block;
+  }
+  .footer-links-col ul {
+    list-style: none !important;
+    padding: 0 !important; margin: 0 !important;
+  }
+  .footer-links-col ul li {
+    list-style: none !important;
+    margin-bottom: 8px;
+  }
+  .footer-links-col ul li a {
+    display: flex; align-items: center; gap: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; color: rgba(250,246,238,0.5);
+    transition: color 0.3s, padding-left 0.2s;
+    padding: 4px 0;
+  }
+  .footer-links-col ul li a:hover {
+    color: var(--gold);
+    padding-left: 4px;
+  }
+  .link-arrow {
+    opacity: 0.4;
+    transition: opacity 0.3s, transform 0.3s;
+    flex-shrink: 0;
+  }
+  .footer-links-col ul li a:hover .link-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+  .footer-contact-list {
+    list-style: none !important;
+    padding: 0 !important; margin: 0 !important;
+  }
+  .footer-contact-list li {
+    list-style: none !important;
+    margin-bottom: 8px;
+  }
+  .footer-brand img {
+    height: 64px; width: 64px;
+    border-radius: 50%; object-fit: cover; object-position: center 15%;
+    border: 2px solid rgba(212,160,23,0.5);
+    margin-bottom: 12px; display: block;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-style: italic;
+    color: var(--white-dim); margin-bottom: 16px;
+  }
+  .footer-social { display: flex; gap: 10px; margin-top: 8px; }
+  .social-btn {
+    width: 38px; height: 38px;
+    border: 1px solid rgba(212,160,23,0.2);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px;
+    transition: border-color 0.3s, background 0.3s;
+    overflow: hidden;
+  }
+  .social-btn:hover { border-color: var(--gold); background: rgba(212,160,23,0.08); }
+  .footer-top {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 48px; padding: 60px 60px 40px;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(212,160,23,0.1);
+    padding: 20px 60px;
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; letter-spacing: 1px;
+    color: rgba(250,246,238,0.3);
+  }
+  .footer-bottom a { color: var(--gold); }
+  .footer-contact-list li {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; color: rgba(250,246,238,0.5);
+    padding: 4px 0;
+  }
+  .footer-contact-list a { color: rgba(250,246,238,0.5); }
+  .footer-contact-list a:hover { color: var(--gold); }
   @media (max-width: 960px) {
     /* NAV */
     nav { padding: 14px 24px !important; }
