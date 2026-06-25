@@ -1092,7 +1092,7 @@ footer {
   .footer-links-col ul li a { font-size: 10px !important; letter-spacing: 1px !important; }
 }
 .hero-logo {
-  width: min(360px, 76vw) !important;
+  width: min(480px, 90vw) !important;
   height: auto !important;
   max-height: none !important;
   border-radius: 0 !important;
@@ -1105,6 +1105,7 @@ footer {
   backdrop-filter: none !important;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,0.45))
           drop-shadow(0 0 18px rgba(201,168,76,0.32)) !important;
+  animation: none !important;
 }
 
 .hero-logo:hover {
@@ -1114,7 +1115,7 @@ footer {
 
 @media (max-width: 480px) {
   .hero-logo {
-    width: min(260px, 82vw) !important;
+    width: min(340px, 88vw) !important;
     height: auto !important;
     padding: 0 !important;
   }
