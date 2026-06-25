@@ -43,20 +43,20 @@ nav {
   transition: padding 0.3s ease;
 }
 .nav-logo img {
-  width: 118px;
-  height: auto;
-  max-height: 72px;
-  border-radius: 0;
-  object-fit: contain;
-  object-position: center;
-  border: 0;
-  box-shadow: none;
-  display: block;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 15% !important;
+  border: 2px solid rgba(212,160,23,0.5) !important;
+  box-shadow: 0 0 14px rgba(201,168,76,0.3) !important;
+  display: block !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
 }
+
 .nav-logo img:hover {
-  transform: translateY(-3px);
-  filter: drop-shadow(0 0 16px rgba(201,168,76,0.45));
+  transform: translateY(-3px) !important;
+  box-shadow: 0 0 0 2px var(--gold), 0 0 18px rgba(201,168,76,0.5) !important;
 }
 .nav-links { display: flex; gap: 36px; }
 .nav-links a {
