@@ -1092,7 +1092,7 @@ footer {
   .footer-links-col ul li a { font-size: 10px !important; letter-spacing: 1px !important; }
 }
 .hero-logo {
-  width: min(480px, 90vw) !important;
+  width: min(600px, 96vw) !important;
   height: auto !important;
   max-height: none !important;
   border-radius: 0 !important;
@@ -1115,7 +1115,7 @@ footer {
 
 @media (max-width: 480px) {
   .hero-logo {
-    width: min(340px, 88vw) !important;
+    width: 98vw !important;
     height: auto !important;
     padding: 0 !important;
   }
