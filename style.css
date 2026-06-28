@@ -117,20 +117,19 @@ nav {
   animation: heroFadeUp 1.2s ease both;
 }
 
-/* HERO LOGO WRAP — negative margin compensates for transparent
-   padding baked into the bottom of the logo PNG itself */
+/* HERO LOGO WRAP — clean spacing now that the logo PNG is cropped
+   to its visible content (no more baked-in transparent padding) */
 .hero-logo-wrap {
-  margin-bottom: -34px;
+  margin-bottom: 4px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 0;
 }
 
-/* HERO LOGO — sized relative to hero content, not the viewport.
-   This is now the dominant visual element in the hero. */
+/* HERO LOGO — the dominant visual element in the hero */
 .hero-logo {
-  width: min(620px, 85%);
+  width: min(540px, 78%);
   height: auto;
   max-height: none;
   border-radius: 0;
@@ -575,8 +574,8 @@ footer { background: #070F1A; border-top: 1px solid rgba(201,168,76,0.15); }
   .hero-sub { font-size: 15px !important; }
   .hero-btns { flex-direction: column !important; align-items: stretch !important; }
   .btn-primary, .btn-outline { text-align: center !important; width: 100% !important; padding: 16px 20px !important; }
-  .hero-logo { width: 92% !important; }
-  .hero-logo-wrap { margin-bottom: -18px !important; }
+  .hero-logo { width: 88% !important; }
+  .hero-logo-wrap { margin-bottom: 6px !important; }
   .stat-num { font-size: 32px !important; }
   .stat-label { font-size: 9px !important; }
   .services-grid { grid-template-columns: 1fr !important; }
