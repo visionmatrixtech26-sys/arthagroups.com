@@ -77,15 +77,14 @@
   .brand-mark em{color:var(--gold);font-style:normal;}
   .brand-logo{height:46px;width:auto;display:block;}
   
-  /* FIXED: Used viewport height (vh) so the logo scales down dynamically on shorter laptop screens, preventing clipping */
   .hero-logo{
     width: 100%;
     max-width: 480px; 
-    height: 40vh; /* Responsive height */
-    min-height: 200px; /* Safety fallback for extreme landscape */
-    max-height: 420px; /* Cap max height for large screens */
+    height: 40vh;
+    min-height: 200px;
+    max-height: 420px;
     object-fit: contain;
-    margin: 0 auto 4vh; /* Responsive margin */
+    margin: 0 auto 4vh;
   }
   
   .about-logo{width:62%;max-width:280px;filter:drop-shadow(0 8px 30px rgba(0,0,0,0.35));}
@@ -120,7 +119,7 @@
       var(--ivory);
     display:flex;align-items:center;justify-content:center;
     text-align:center;color:var(--charcoal);
-    padding:120px 24px 60px; /* Adjusted padding to free up space */
+    padding:120px 24px 60px;
     overflow:hidden;
   }
   .hero-watermark{
@@ -353,13 +352,13 @@
   }
   @media (max-width:600px){
     .hero-logo {
-      height: 30vh; /* Scaled down even further for mobile */
+      height: 30vh;
       min-height: 160px;
       margin-bottom: 2vh;
     }
     .hero {
       padding: 100px 20px 40px; 
-      min-height: auto; /* Drops forcing 100vh on extremely small screens */
+      min-height: auto;
     }
     .service-grid, .portfolio-grid, .t-grid{grid-template-columns:1fr;}
     .process-item{grid-template-columns:60px 1fr;gap:20px;}
@@ -374,7 +373,6 @@
 <header id="siteHeader">
   <nav class="wrap">
     <div class="brand">
-      <img src="https://arthagroups.com/artha.png" alt="Artha Logo" class="brand-logo">
       <div>
         <span class="brand-mark">ARTH<em>A</em></span>
         <span class="brand-sub">Interior Designers</span>
@@ -599,7 +597,6 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand" style="display:flex;align-items:center;gap:14px;">
-        <img src="https://arthagroups.com/artha.png" alt="Artha Logo" class="footer-logo">
         <span>ARTH<em>A</em> <span style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,246,236,0.5);vertical-align:middle;margin-left:10px;">Interior Designers</span></span>
       </div>
       <div class="footer-links">
