@@ -76,7 +76,10 @@
   }
   .brand-mark em{color:var(--gold);font-style:normal;}
   .brand-logo{height:46px;width:auto;display:block;}
-  .hero-logo{height:240px;width:auto;margin:0 auto 30px;}
+  
+  /* UPDATED: Increased hero logo size 2x (from 240px to 480px) and added object-fit */
+  .hero-logo{height:480px;width:auto;max-width:100%;object-fit:contain;margin:0 auto 30px;}
+  
   .about-logo{width:62%;max-width:280px;filter:drop-shadow(0 8px 30px rgba(0,0,0,0.35));}
   .footer-logo{height:40px;width:auto;}
   .brand-sub{
@@ -352,7 +355,9 @@
 
 <header id="siteHeader">
   <nav class="wrap">
+    <!-- UPDATED: Added artha.png to header -->
     <div class="brand">
+      <img src="https://arthagroups.com/artha.png" alt="Artha Logo" class="brand-logo">
       <div>
         <span class="brand-mark">ARTH<em>A</em></span>
         <span class="brand-sub">Interior Designers</span>
@@ -372,6 +377,7 @@
 <section class="hero">
   <div class="hero-watermark" aria-hidden="true">अ</div>
   <div class="hero-inner">
+    <!-- Hero logo remains, but its CSS is updated to double the size -->
     <img src="https://arthagroups.com/artha.png" alt="Artha Interior Designers" class="hero-logo">
     <span class="eyebrow">Artha, meaning purpose &amp; prosperity</span>
     <h1>Spaces designed<br>with <span class="accent">intention</span></h1>
@@ -390,10 +396,14 @@
   </div>
 </section>
 
+<!-- NOTE: Included previous HTML structural fix for this section as well -->
 <section class="about" id="philosophy">
   <div class="wrap about-grid">
     <div class="about-visual reveal">
-     <div>
+      <div class="ring">
+        <span>Purpose &<br>Prosperity</span>
+      </div>
+    </div>
     <div class="about-copy reveal">
       <span class="eyebrow">Our Philosophy</span>
       <h3>Design should earn its place in your life, not just your photographs.</h3>
@@ -573,8 +583,10 @@
 <footer>
   <div class="wrap">
     <div class="footer-top">
+      <!-- UPDATED: Added artha.png to footer -->
       <div class="footer-brand" style="display:flex;align-items:center;gap:14px;">
-          <span>ARTH<em>A</em> <span style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,246,236,0.5);vertical-align:middle;margin-left:10px;">Interior Designers</span></span>
+        <img src="https://arthagroups.com/artha.png" alt="Artha Logo" class="footer-logo">
+        <span>ARTH<em>A</em> <span style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,246,236,0.5);vertical-align:middle;margin-left:10px;">Interior Designers</span></span>
       </div>
       <div class="footer-links">
         <a href="#philosophy">Philosophy</a>
