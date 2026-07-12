@@ -110,16 +110,15 @@
   .hero{
     position:relative;
     min-height:100vh;
-    background-color:#FBFAF6;
+    background-color:#0A0B22;
     background-image:
-      radial-gradient(ellipse at 15% 10%, rgba(255,255,255,0.9), transparent 55%),
-      radial-gradient(ellipse at 85% 90%, rgba(255,255,255,0.85), transparent 55%),
-      radial-gradient(ellipse at 50% 0%, rgba(201,162,77,0.07), transparent 60%),
-      repeating-linear-gradient(120deg, rgba(20,22,66,0.015) 0px, rgba(20,22,66,0.015) 1px, transparent 1px, transparent 5px),
-      repeating-linear-gradient(35deg, rgba(20,22,66,0.012) 0px, rgba(20,22,66,0.012) 1px, transparent 1px, transparent 7px),
-      linear-gradient(180deg, #FCFBF8 0%, #F6F2E8 100%);
+      linear-gradient(180deg, rgba(10,11,34,0.72) 0%, rgba(10,11,34,0.55) 45%, rgba(10,11,34,0.86) 100%),
+      url('https://images.unsplash.com/photo-1759238136854-a43787126db7?q=80&w=2400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center 35%;
+    background-repeat:no-repeat;
     display:flex;align-items:center;justify-content:center;
-    text-align:center;color:var(--charcoal);
+    text-align:center;color:var(--ivory);
     padding:128px 24px 56px;
     overflow:hidden;
   }
@@ -128,7 +127,7 @@
     font-family:var(--serif);
     font-size:min(70vw, 900px);
     font-weight:500;
-    color:rgba(20,22,66,0.04);
+    color:rgba(250,246,236,0.045);
     top:50%;left:50%;
     transform:translate(-50%,-52%);
     user-select:none;pointer-events:none;
@@ -146,7 +145,7 @@
     text-align:center;
   }
   .hero-content{display:flex;flex-direction:column;align-items:center;}
-  .hero .eyebrow{margin:0 0 24px 0;color:var(--gold-dim);}
+  .hero .eyebrow{margin:0 0 24px 0;color:var(--gold-light);}
   .hero h1{
     font-family:var(--serif);
     font-weight:500;
@@ -154,13 +153,14 @@
     line-height:1.08;
     letter-spacing:0.01em;
     margin:0 0 18px;
-    color:var(--navy-deep);
+    color:var(--ivory);
+    text-shadow:0 4px 24px rgba(0,0,0,0.35);
   }
   .hero h1 .accent{
-    font-style:italic;font-weight:400;color:var(--gold-dim);
+    font-style:italic;font-weight:400;color:var(--gold-light);
   }
   .hero p.lede{
-    font-size:16.5px;line-height:1.7;color:#5B5B68;
+    font-size:16.5px;line-height:1.7;color:rgba(250,246,236,0.82);
     max-width:600px;margin:0 auto 30px;
     font-weight:300;
   }
@@ -174,8 +174,8 @@
   .btn-gold{background:var(--gold);color:var(--navy-deep);font-weight:500;box-shadow:0 0 0 rgba(201,162,77,0);}
   .btn-gold:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 14px 28px rgba(201,162,77,0.32);}
   .btn-gold:active{transform:translateY(-1px);}
-  .btn-ghost{border-color:rgba(20,22,66,0.3);color:var(--navy-deep);}
-  .btn-ghost:hover{border-color:var(--navy-deep);color:var(--navy-deep);background:rgba(20,22,66,0.04);transform:translateY(-3px);box-shadow:0 14px 28px rgba(20,22,66,0.08);}
+  .btn-ghost{border-color:rgba(250,246,236,0.45);color:var(--ivory);}
+  .btn-ghost:hover{border-color:var(--ivory);color:var(--ivory);background:rgba(250,246,236,0.1);transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,0.25);}
   .btn-ghost:active{transform:translateY(-1px);}
   .hero-flourish{max-width:340px;margin:0 auto;}
   .hero-flourish .flourish{justify-content:center;}
