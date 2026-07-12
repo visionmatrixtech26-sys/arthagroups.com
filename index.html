@@ -80,7 +80,7 @@
     font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-dim);
     margin-top:2px;display:block;
   }
-  .nav-links{display:flex;gap:40px;align-items:center;}
+  .nav-links{display:flex;gap:35px;align-items:center;}
   .nav-links a{
     font-size:13px;letter-spacing:0.06em;color:var(--ivory-dim);
     position:relative;padding:4px 0;transition:color .3s ease;
@@ -231,6 +231,15 @@
   .stat h4{font-family:var(--serif);font-size:38px;color:var(--navy);font-weight:500;}
   .stat span{font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8A95;}
 
+  /* ---------- Why Choose Us ---------- */
+  .why-choose{background:var(--ivory-dim); padding: 130px 0;}
+  .why-content{max-width: 800px; margin: 0 auto; text-align: center;}
+  .why-content p{font-size: 16.5px; line-height: 1.8; color: #4B4B58; font-weight: 300; margin-bottom: 24px; text-align: justify;}
+  .why-content p:last-of-type{text-align: center; font-size: 18px; font-weight: 400; color: var(--navy-deep); margin-top: 30px;}
+  .why-quote-area{margin-top: 40px; text-align: center;}
+  .why-quote-area .brand-name{font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--navy-deep); letter-spacing: 0.05em; display: block; margin-bottom: 8px;}
+  .why-quote-area .slogan{font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--gold-dim);}
+
   /* ---------- Services ---------- */
   .services{background:var(--navy-deep);color:var(--ivory);}
   .services .section-head p{color:rgba(250,246,236,0.6);}
@@ -312,9 +321,13 @@
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
   .contact-info h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:16px 0 20px;}
   .contact-info p{font-size:15.5px;line-height:1.8;color:#4B4B58;font-weight:300;margin-bottom:30px;}
-  .contact-detail{margin-bottom:22px;}
-  .contact-detail span{display:block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:4px;}
-  .contact-detail strong{font-size:16px;font-weight:500;}
+  
+  .contact-methods{display: flex; flex-direction: column; gap: 24px;}
+  .contact-item{display: flex; gap: 16px; align-items: flex-start;}
+  .contact-icon{width: 24px; height: 24px; fill: none; stroke: var(--gold); stroke-width: 1.5; flex-shrink: 0;}
+  .contact-item span{display:block;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:4px;}
+  .contact-item strong{font-size:16px;font-weight:500; color:var(--navy-deep); line-height: 1.4; display:block;}
+
   form{display:flex;flex-direction:column;gap:20px;}
   .field{display:flex;flex-direction:column;gap:8px;}
   .field label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8A95;}
@@ -417,7 +430,7 @@
       max-height:0;overflow:hidden;opacity:0;
       transition:max-height .35s ease, opacity .3s ease, padding .35s ease;
     }
-    .nav-links.open{max-height:400px;opacity:1;padding:18px 22px 22px;}
+    .nav-links.open{max-height:450px;opacity:1;padding:18px 22px 22px;}
     .nav-links a{padding:12px 0;width:100%;border-bottom:1px solid rgba(250,246,236,0.08);}
     .nav-links a:last-child{border-bottom:none;}
     .nav-cta{align-self:flex-start;margin-top:6px;}
@@ -439,6 +452,7 @@
     .footer-top{flex-direction:column;align-items:flex-start;}
     .contact-grid{gap:40px;}
     .option-item{padding:14px;}
+    .why-content p{text-align: left;}
   }
 
   @media (max-width:420px){
@@ -461,6 +475,7 @@
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#philosophy">Philosophy</a>
+      <a href="#why-us">Why Us</a>
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#portfolio">Portfolio</a>
@@ -506,6 +521,27 @@
         <div class="stat"><h4>120+</h4><span>Homes Designed</span></div>
         <div class="stat"><h4>9</h4><span>Years of Craft</span></div>
         <div class="stat"><h4>3</h4><span>Cities Served</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose" id="why-us">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Heritage</span>
+      <h2>Why Choose Artha Interior Designers?</h2>
+    </div>
+    <div class="why-content reveal">
+      <p>At Artha Interior Designers, our carpentry team brings generations of experience, with woodworking being a proud family tradition passed down over the years. This heritage, combined with modern techniques, allows us to deliver exceptional craftsmanship with precision and attention to detail.</p>
+      <p>Unlike factory-manufactured modular installations, we execute all carpentry work directly at your site. This ensures complete transparency throughout the process, allows for customization based on your space, and gives our clients full visibility into the quality of materials and workmanship.</p>
+      <p>We believe in the efficient utilization of every material, minimizing wastage without compromising on quality. Our skilled craftsmen work with accuracy, neatness, and professionalism, ensuring a clean and well-organized work environment.</p>
+      <p>From the initial 3D design and rendering to the final installation, every stage is carried out with meticulous planning and expert execution. Our commitment is to deliver premium finishes, durable workmanship, and interiors that exceed our clients' expectations.</p>
+      <p>At Artha Interior Designers, we don't just build interiors—we craft timeless spaces that combine beauty, functionality, and lasting value.</p>
+      
+      <div class="why-quote-area">
+        <span class="brand-name">- Artha Interior Designers.</span>
+        <span class="slogan">"We Design Your Dreams"</span>
       </div>
     </div>
   </div>
@@ -616,18 +652,59 @@
       <span class="eyebrow">Get In Touch</span>
       <h3>Start with a conversation, not a quote.</h3>
       <p>Tell us about your space and how you use it. We'll schedule a walk-through and come back with a brief before we talk numbers.</p>
-      <div class="contact-detail">
-        <span>Studio</span>
-        <strong>Kolar, Karnataka</strong>
+      
+      <div class="contact-methods">
+        
+        <!-- Address Icon -->
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <div>
+            <span>Address</span>
+            <strong>RT Nagar, Bangalore<br>Karnataka</strong>
+          </div>
+        </div>
+
+        <!-- Phone Icon -->
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <div>
+            <span>Phone</span>
+            <strong>+91 98458 40824</strong>
+          </div>
+        </div>
+
+        <!-- Email Icon -->
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <div>
+            <span>Email</span>
+            <strong>contact@arthagroups.com</strong>
+          </div>
+        </div>
+
+        <!-- Instagram Icon -->
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <div>
+            <span>Instagram</span>
+            <strong>Interiors by Artha</strong>
+          </div>
+        </div>
+
       </div>
-      <div class="contact-detail">
-        <span>Serving</span>
-        <strong>Karnataka · Andhra Pradesh · Telangana</strong>
-      </div>
-      <div class="contact-detail">
-        <span>Email</span>
-        <strong>hello@arthainteriors.in</strong>
-      </div>
+
     </div>
     <div class="reveal">
       <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent='Request Sent';">
@@ -678,6 +755,7 @@
       </div>
       <div class="footer-links">
         <a href="#philosophy">Philosophy</a>
+        <a href="#why-us">Why Us</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#portfolio">Portfolio</a>
@@ -686,7 +764,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Artha Interior Designers. All rights reserved.</span>
-      <span>Kolar, Karnataka · India</span>
+      <span>RT Nagar, Bangalore · Karnataka · India</span>
     </div>
   </div>
 </footer>
