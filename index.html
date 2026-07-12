@@ -284,27 +284,27 @@
   .process-item h3{font-family:var(--serif);font-size:24px;font-weight:500;margin-bottom:8px;}
   .process-item p{font-size:15px;line-height:1.7;color:#5B5B68;font-weight:300;max-width:520px;}
 
-  /* ---------- Portfolio ---------- */
+  /* ---------- Portfolio / Specialization ---------- */
   .portfolio{background:var(--ivory);}
   .portfolio-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
   }
   .p-item{
     aspect-ratio:3/4;position:relative;border-radius:2px;overflow:hidden;
     display:flex;align-items:flex-end;
   }
+  .p-item img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:1;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .p-item:hover img{transform:scale(1.06);}
   .p-item .overlay{
     position:relative;z-index:2;padding:26px;color:var(--ivory);width:100%;
-    background:linear-gradient(0deg, rgba(10,11,34,0.82), transparent 70%);
+    background:linear-gradient(0deg, rgba(10,11,34,0.86), transparent 70%);
   }
   .p-item .overlay span{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-light);}
   .p-item .overlay h4{font-family:var(--serif);font-size:22px;font-weight:500;margin-top:6px;}
-  .p1{background:linear-gradient(150deg,#2B2E5E,#0A0B22);}
-  .p2{background:linear-gradient(150deg,#4A3B22,#171833);}
-  .p3{background:linear-gradient(150deg,#33375F,#0F1030);}
-  .p4{background:linear-gradient(150deg,#1E2140,#3C3320);}
-  .p5{background:linear-gradient(150deg,#26284E,#101226);}
-  .p6{background:linear-gradient(150deg,#3A2F1C,#1A1B34);}
 
   /* ---------- Testimonials ---------- */
   .testimonials{background:var(--navy);color:var(--ivory);}
@@ -415,11 +415,13 @@
     .about-grid{gap:56px;}
     .service-card{padding:40px 28px;}
     section{padding:100px 0;}
+    .portfolio-grid{grid-template-columns:repeat(3,1fr);}
   }
 
   @media (max-width:900px){
     .about-grid, .contact-grid{grid-template-columns:1fr;gap:50px;}
-    .service-grid, .portfolio-grid, .t-grid{grid-template-columns:repeat(2,1fr);}
+    .service-grid, .t-grid{grid-template-columns:repeat(2,1fr);}
+    .portfolio-grid{grid-template-columns:repeat(2,1fr);}
     .nav-links{
       display:flex;flex-direction:column;align-items:flex-start;gap:0;
       position:absolute;top:calc(100% + 18px);left:0;right:0;
@@ -439,7 +441,8 @@
   }
 
   @media (max-width:600px){
-    .service-grid, .portfolio-grid, .t-grid{grid-template-columns:1fr;}
+    .service-grid, .t-grid{grid-template-columns:1fr;}
+    .portfolio-grid{grid-template-columns:1fr;}
     .process-item{grid-template-columns:56px 1fr;gap:18px;}
     .process-item .step-num{font-size:34px;}
     section{padding:80px 0;}
@@ -478,7 +481,7 @@
       <a href="#why-us">Why Us</a>
       <a href="#services">Services</a>
       <a href="#process">Process</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#portfolio">Specialization</a>
       <a href="#contact" class="nav-cta">Book a Consultation</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
@@ -494,7 +497,7 @@
       <p class="lede">Artha Interior Designers shapes homes and workplaces around how you actually live — considered materials, honest craftsmanship, and layouts built to last well beyond the last coat of paint.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-gold">Book a Consultation</a>
-        <a href="#portfolio" class="btn btn-ghost">View Portfolio</a>
+        <a href="#portfolio" class="btn btn-ghost">View Specialization</a>
       </div>
       <div class="hero-flourish">
         <div class="flourish">
@@ -605,17 +608,18 @@
 <section class="portfolio" id="portfolio">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Selected Work</span>
-      <h2>A few rooms we're proud of</h2>
-      <p>Every project below started as the same blank floor plan — the difference is in how each family lives.</p>
+      <span class="eyebrow">Our Expertise</span>
+      <h2>What we specialize in</h2>
+      <p>From the first foyer impression to the last utility detail — every zone of the home gets the same level of attention.</p>
     </div>
     <div class="portfolio-grid reveal">
-      <div class="p-item p1"><div class="overlay"><span>Residential</span><h4>Jubilee Hills Living Room</h4></div></div>
-      <div class="p-item p2"><div class="overlay"><span>Kitchen</span><h4>Banjara Hills Modular Kitchen</h4></div></div>
-      <div class="p-item p3"><div class="overlay"><span>Residential</span><h4>Kolar Family Duplex</h4></div></div>
-      <div class="p-item p4"><div class="overlay"><span>Commercial</span><h4>Anantapur Clinic Interior</h4></div></div>
-      <div class="p-item p5"><div class="overlay"><span>Residential</span><h4>Gachibowli Master Bedroom</h4></div></div>
-      <div class="p-item p6"><div class="overlay"><span>Renovation</span><h4>Secunderabad Home Makeover</h4></div></div>
+      <div class="p-item"><img src="foyerarea.jpeg" alt="Foyer Area"><div class="overlay"><span>Entryway</span><h4>Foyer Area</h4></div></div>
+      <div class="p-item"><img src="hall.jpeg" alt="Hall"><div class="overlay"><span>Living</span><h4>Hall</h4></div></div>
+      <div class="p-item"><img src="livingarea.jpeg" alt="Living Area"><div class="overlay"><span>Living</span><h4>Living Area</h4></div></div>
+      <div class="p-item"><img src="kitchen.jpeg" alt="Kitchen"><div class="overlay"><span>Kitchen</span><h4>Modular Kitchen</h4></div></div>
+      <div class="p-item"><img src="bedroom.jpeg" alt="Bedroom"><div class="overlay"><span>Bedroom</span><h4>Bedroom</h4></div></div>
+      <div class="p-item"><img src="masterbedroom.jpeg" alt="Master Bedroom"><div class="overlay"><span>Bedroom</span><h4>Master Bedroom</h4></div></div>
+      <div class="p-item"><img src="tvunit.jpeg" alt="TV Unit"><div class="overlay"><span>Living</span><h4>TV Unit</h4></div></div>
     </div>
   </div>
 </section>
@@ -758,7 +762,7 @@
         <a href="#why-us">Why Us</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#portfolio">Specialization</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
