@@ -70,6 +70,7 @@
   }
   nav{display:flex;align-items:center;justify-content:space-between;position:relative;}
   .brand{display:flex;align-items:center;gap:12px;}
+  .brand-logo{height:46px;width:auto;display:block;}
   .brand-mark{
     font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:0.08em;
     color:var(--ivory);
@@ -213,6 +214,11 @@
   .about-visual .ring span{
     font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:19px;
     letter-spacing:0.06em;text-align:center;padding:0 20px;
+  }
+  .about-logo{
+    position:relative;z-index:1;
+    width:62%;max-width:280px;
+    filter:drop-shadow(0 8px 30px rgba(0,0,0,0.35));
   }
   .about-copy h3{
     font-family:var(--serif);font-weight:500;font-size:30px;margin:14px 0 22px;
@@ -451,6 +457,7 @@
 <header id="siteHeader">
   <nav class="wrap">
     <div class="brand">
+      <img src="arthawhitelogo.png" alt="Artha Interior Designers" class="brand-logo">
       <div>
         <span class="brand-mark">ARTH<em>A</em></span>
         <span class="brand-sub">Interior Designers</span>
@@ -494,7 +501,9 @@
 
 <section class="about" id="philosophy">
   <div class="wrap about-grid">
-    <div class="about-visual reveal"></div>
+    <div class="about-visual reveal">
+      <img src="arthawhitelogo.png" alt="Artha Interior Designers emblem" class="about-logo">
+    </div>
     <div class="about-copy reveal">
       <span class="eyebrow">Our Philosophy</span>
       <h3>Design should earn its place in your life, not just your photographs.</h3>
@@ -671,6 +680,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand" style="display:flex;align-items:center;gap:14px;">
+        <img src="arthawhitelogo.png" alt="Artha Interior Designers logo" class="footer-logo">
         <span>ARTH<em>A</em> <span style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,246,236,0.5);vertical-align:middle;margin-left:10px;">Interior Designers</span></span>
       </div>
       <div class="footer-links">
