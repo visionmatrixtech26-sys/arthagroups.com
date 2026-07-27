@@ -151,24 +151,55 @@
   </div>
 </section>
 
-<section class="portfolio" id="gallery">
+<!-- ===== EDITORIAL GALLERY — homepage ===== -->
+<section class="home-gallery" id="gallery">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Our Expertise</span>
-      <h2>View Our Gallery</h2>
-      <p>A preview of the zones we design most — from the first foyer impression to the last utility detail.</p>
+    <div class="home-gallery-head reveal">
+      <div class="home-gallery-label">
+        <span class="eyebrow">Our Expertise</span>
+        <h2>View Our Gallery</h2>
+      </div>
+      <p class="home-gallery-sub">A preview of the spaces we shape — from the first impression at the foyer to the last fitting in the kitchen.</p>
     </div>
-    <div class="portfolio-grid grid-4-preview reveal">
-      <div class="p-item"><img src="livingarea.jpeg" alt="Living Area"><div class="overlay"><span>Living</span><h4>Living Area</h4></div></div>
-      <div class="p-item"><img src="kitchen.jpeg" alt="Kitchen"><div class="overlay"><span>Kitchen</span><h4>Modular Kitchen</h4></div></div>
-      <div class="p-item"><img src="foyerarea.jpeg" alt="Foyer Area"><div class="overlay"><span>Entryway</span><h4>Foyer Area</h4></div></div>
+  </div>
+
+  <!-- Editorial split: 1 large left + 2 stacked right -->
+  <div class="editorial-grid reveal">
+    <a href="Portfolio.html" class="ed-main">
+      <img src="livingarea.jpeg" alt="Living Area">
+      <div class="ed-label">
+        <span class="ed-cat">Living</span>
+        <h3 class="ed-title">Living Area</h3>
+      </div>
+    </a>
+    <div class="ed-stack">
+      <a href="Portfolio.html" class="ed-small">
+        <img src="kitchen.jpeg" alt="Modular Kitchen">
+        <div class="ed-label">
+          <span class="ed-cat">Kitchen</span>
+          <h3 class="ed-title">Modular Kitchen</h3>
+        </div>
+      </a>
+      <a href="Portfolio.html" class="ed-small">
+        <img src="foyerarea.jpeg" alt="Foyer Area">
+        <div class="ed-label">
+          <span class="ed-cat">Entryway</span>
+          <h3 class="ed-title">Foyer Area</h3>
+        </div>
+      </a>
     </div>
+    <!-- floating large number watermark -->
+    <div class="ed-watermark" aria-hidden="true">20+<br><span>Projects</span></div>
+  </div>
+
+  <div class="wrap">
     <div class="gallery-cta reveal">
       <a href="Portfolio.html" class="btn btn-gold on-light">View Full Gallery</a>
     </div>
   </div>
 </section>
 
+<!-- ===== ONGOING PROJECTS ===== -->
 <section class="ongoing-projects" id="ongoing-projects">
   <div class="wrap">
     <div class="section-head reveal">
@@ -292,7 +323,6 @@
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
   });
-
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   navToggle.addEventListener('click', () => {
@@ -307,13 +337,11 @@
       navToggle.textContent = '☰';
     });
   });
-
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
 </script>
-
 </body>
 </html>
