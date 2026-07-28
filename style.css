@@ -216,7 +216,7 @@ section{padding:130px 0;}
 
 /* ---------- Ongoing Projects (home page text cards) ---------- */
 .ongoing-projects{background:var(--ivory-dim);}
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;}
 
 /* ---------- Project image cards (Portfolio page + updated index cards) ---------- */
 .project-card{
