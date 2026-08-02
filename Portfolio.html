@@ -4,11 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Artha Interior Designers</title>
-<meta name="description" content="Browse Artha Interior Designers' portfolio — completed projects, ongoing work, foyers, halls, living areas, kitchens, bedrooms and TV units.">
+<meta name="description" content="Browse Artha Interior Designers' portfolio — completed projects, ongoing work, foyers, cub boards, living areas, kitchens, bedrooms and dinning areas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Override bento grid to equal 2x2 cards */
+  .gallery-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  @media (min-width: 768px) {
+    .gallery-grid-2x2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .gallery-grid-2x2 .bento-item {
+    height: 340px;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+</style>
 </head>
 <body>
 
@@ -48,14 +67,10 @@
   </div>
 </div>
 
-<!-- ===== ONGOING — Site Tracker Cards ===== -->
+<!-- ===== ONGOING — Clean Cards ===== -->
 <section class="port-ongoing" id="ongoing">
   <div class="wrap">
     <div class="port-section-intro reveal">
-      <div class="port-section-label">
-        <span class="pulse-dot"></span>
-        <span class="eyebrow">Live Right Now</span>
-      </div>
       <h2 class="port-section-title">On Site Working Images</h2>
     </div>
 
@@ -63,40 +78,13 @@
     <div class="tracker-card reveal">
       <div class="tracker-img">
         <img src="ongoingprojectakashavanilayout.jpeg" alt="Akashavani Layout">
-        <div class="tracker-img-badge status-execution">Execution Phase</div>
       </div>
       <div class="tracker-body">
-        <span class="tracker-num">Project 01</span>
         <h3 class="tracker-title">Independent House<br>Akashavani Layout</h3>
         <span class="tracker-loc">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Bangalore, Karnataka · Residential
         </span>
-        <p class="tracker-desc">Full flat interior fit-out — carpentry and kitchen installation underway on site.</p>
-        <div class="tracker-phase">
-          <div class="phase-label">Project Phase</div>
-          <div class="phase-track">
-            <div class="phase-step done">
-              <div class="phase-dot"></div>
-              <span>Consultation</span>
-            </div>
-            <div class="phase-line done"></div>
-            <div class="phase-step done">
-              <div class="phase-dot"></div>
-              <span>Design</span>
-            </div>
-            <div class="phase-line done"></div>
-            <div class="phase-step active">
-              <div class="phase-dot"></div>
-              <span>Execution</span>
-            </div>
-            <div class="phase-line"></div>
-            <div class="phase-step">
-              <div class="phase-dot"></div>
-              <span>Handover</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -104,40 +92,13 @@
     <div class="tracker-card reveal">
       <div class="tracker-img">
         <img src="ongoingprojectthanisandra.jpeg" alt="Manyata Tech Park">
-        <div class="tracker-img-badge status-design">Design Finalization</div>
       </div>
       <div class="tracker-body">
-        <span class="tracker-num">Project 02</span>
         <h3 class="tracker-title">Independent House<br>Manyata Tech Park</h3>
         <span class="tracker-loc">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Bangalore, Karnataka · Residential
         </span>
-        <p class="tracker-desc">3D walkthrough approved. Material and vendor selection in progress ahead of on-site execution.</p>
-        <div class="tracker-phase">
-          <div class="phase-label">Project Phase</div>
-          <div class="phase-track">
-            <div class="phase-step done">
-              <div class="phase-dot"></div>
-              <span>Consultation</span>
-            </div>
-            <div class="phase-line done"></div>
-            <div class="phase-step active">
-              <div class="phase-dot"></div>
-              <span>Design</span>
-            </div>
-            <div class="phase-line"></div>
-            <div class="phase-step">
-              <div class="phase-dot"></div>
-              <span>Execution</span>
-            </div>
-            <div class="phase-line"></div>
-            <div class="phase-step">
-              <div class="phase-dot"></div>
-              <span>Handover</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -163,7 +124,6 @@
       <div class="case-img-tag">Completed · 2023</div>
     </div>
     <div class="case-body">
-      <span class="case-index">02</span>
       <h3 class="case-title">Independent House —<br>Manyata Tech Park</h3>
       <span class="case-type">Residential · Bangalore</span>
       <p class="case-desc">Full independent house interior — all rooms designed and executed on-site by our in-house carpentry team with complete client visibility at every stage.</p>
@@ -183,7 +143,6 @@
       <div class="case-img-tag">Completed · 2025</div>
     </div>
     <div class="case-body">
-      <span class="case-index">01</span>
       <h3 class="case-title">3BHK Flat —<br>MCECHS Layout</h3>
       <span class="case-type">Residential · Bangalore</span>
       <p class="case-desc">Full 3BHK interior — living, dining, kitchen, three bedrooms and utility. Designed, executed and handed over on schedule with zero scope changes post-approval.</p>
@@ -199,17 +158,16 @@
   <!-- Case study 3 — image left -->
   <div class="case-study reveal">
     <div class="case-img">
-      <img src="duplexhouseyelahanka.jpeg" alt="Duplex House Yelahanka">
+      <img src="duplexhouseyalahanka.jpeg" alt="Duplex House Yelahanka">
       <div class="case-img-tag">Completed · 2024</div>
     </div>
     <div class="case-body">
-      <span class="case-index">03</span>
       <h3 class="case-title">Duplex House —<br>Yelahanka</h3>
       <span class="case-type">Residential Duplex · Bangalore</span>
-      <p class="case-desc">Two-floor duplex fit-out — foyer, hall, kitchen, bedrooms and staircase unit. All carpentry executed on-site by our in-house team with full client visibility at every stage.</p>
+      <p class="case-desc">Two-floor duplex fit-out — foyer, cub boards, kitchen, bedrooms and staircase unit. All carpentry executed on-site by our in-house team with full client visibility at every stage.</p>
       <div class="case-tags">
         <span>Foyer</span>
-        <span>Hall</span>
+        <span>Cub Boards</span>
         <span>Kitchen</span>
         <span>Duplex Staircase</span>
       </div>
@@ -217,7 +175,7 @@
   </div>
 </section>
 
-<!-- ===== SPECIALIZE — Bento Mosaic ===== -->
+<!-- ===== SPECIALIZE — Equal 2x2 Gallery Grid ===== -->
 <section class="port-specialize" id="specialize">
   <div class="wrap">
     <div class="port-section-intro reveal">
@@ -227,59 +185,57 @@
       <h2 class="port-section-title">What We Specialize In</h2>
       <p class="port-section-sub">From the first foyer impression to the last fitting — every zone of the home gets the same level of attention.</p>
     </div>
-  </div>
 
-  <div class="bento-grid reveal">
-    <!-- Large hero — Foyer -->
-    <a href="#foyer" class="bento-item bento-hero" id="foyer">
-      <img src="foyerarea.jpeg" alt="Foyer Area">
-      <div class="bento-label">
-        <span class="bento-cat">Entryway</span>
-        <h3>Foyer Area</h3>
-        <p>First impressions that last</p>
-      </div>
-    </a>
-    <!-- Cup Boards -->
-    <a href="#hall" class="bento-item bento-tall" id="Cup Boards">
-      <img src="hall.jpeg" alt="Cup Boards">
-      <div class="bento-label">
-        <span class="bento-cat">Living</span>
-        <h3>Hall</h3>
-      </div>
-    </a>
-    <!-- Bedroom -->
-    <a href="#living" class="bento-item bento-wide" id="living">
-      <img src="livingarea.jpeg" alt="Living Area">
-      <div class="bento-label">
-        <span class="bento-cat">Living</span>
-        <h3>Living Area</h3>
-      </div>
-    </a>
-    <!-- Kitchen -->
-    <a href="#kitchen" class="bento-item bento-tall" id="kitchen">
-      <img src="kitchen.jpeg" alt="Kitchen">
-      <div class="bento-label">
-        <span class="bento-cat">Kitchen</span>
-        <h3>Kitchen</h3>
-        <p>Precision-crafted, site-built</p>
-      </div>
-    </a>
-    <!-- Bedroom -->
-    <a href="#bedroom" class="bento-item" id="bedroom">
-      <img src="bedroom.jpeg" alt="Bedroom">
-      <div class="bento-label">
-        <span class="bento-cat">Bedroom</span>
-        <h3>Bedroom</h3>
-      </div>
-    </a>
-    <!-- TV Unit -->
-    <a href="#tvunit" class="bento-item" id="tvunit">
-      <img src="tvunit.jpeg" alt="TV Unit">
-      <div class="bento-label">
-        <span class="bento-cat">Living</span>
-        <h3>TV Unit</h3>
-      </div>
-    </a>
+    <div class="gallery-grid-2x2 reveal">
+      <!-- Foyer Area -->
+      <a href="#foyer" class="bento-item" id="foyer">
+        <img src="foyerarea.jpeg" alt="Foyer Area">
+        <div class="bento-label">
+          <span class="bento-cat">Entryway</span>
+          <h3>Foyer Area</h3>
+        </div>
+      </a>
+      <!-- Cub Boards -->
+      <a href="#cubboards" class="bento-item" id="cubboards">
+        <img src="hall.jpeg" alt="Cub Boards">
+        <div class="bento-label">
+          <span class="bento-cat">Storage</span>
+          <h3>Cub Boards</h3>
+        </div>
+      </a>
+      <!-- Living Area -->
+      <a href="#living" class="bento-item" id="living">
+        <img src="livingarea.jpeg" alt="Living Area">
+        <div class="bento-label">
+          <span class="bento-cat">Living</span>
+          <h3>Living Area</h3>
+        </div>
+      </a>
+      <!-- Kitchen -->
+      <a href="#kitchen" class="bento-item" id="kitchen">
+        <img src="kitchen.jpeg" alt="Kitchen">
+        <div class="bento-label">
+          <span class="bento-cat">Kitchen</span>
+          <h3>Kitchen</h3>
+        </div>
+      </a>
+      <!-- Bedroom -->
+      <a href="#bedroom" class="bento-item" id="bedroom">
+        <img src="bedroom.jpeg" alt="Bedroom">
+        <div class="bento-label">
+          <span class="bento-cat">Bedroom</span>
+          <h3>Bedroom</h3>
+        </div>
+      </a>
+      <!-- Dinning Area -->
+      <a href="#dinning" class="bento-item" id="dinning">
+        <img src="tvunit.jpeg" alt="Dinning Area">
+        <div class="bento-label">
+          <span class="bento-cat">Dining</span>
+          <h3>Dinning Area</h3>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
