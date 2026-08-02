@@ -27,6 +27,30 @@
     grid-column: auto !important;
     grid-row: auto !important;
   }
+
+  /* Tighten ongoing tracker cards to remove empty space */
+  .tracker-card {
+    min-height: auto !important;
+    height: auto !important;
+    align-items: center;
+  }
+  .tracker-img {
+    height: 260px !important;
+    min-height: 260px !important;
+  }
+  .tracker-body {
+    padding: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+  .tracker-title {
+    margin: 0 !important;
+  }
+  .tracker-loc {
+    margin: 0 !important;
+  }
 </style>
 </head>
 <body>
@@ -67,7 +91,7 @@
   </div>
 </div>
 
-<!-- ===== ONGOING — Clean Cards ===== -->
+<!-- ===== ONGOING — Clean Compact Cards ===== -->
 <section class="port-ongoing" id="ongoing">
   <div class="wrap">
     <div class="port-section-intro reveal">
